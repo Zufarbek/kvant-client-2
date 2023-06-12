@@ -5,6 +5,28 @@ import { Menu } from 'antd';
 import { menuPrimary } from '~/public/static/data/menu';
 import menu_data from '~/public/static/data/menu';
 import Link from 'next/link';
+const mainMenu= [
+    {
+        title: "О нас",
+        path: "/page/about-us",
+        id: '1',
+    },
+    {
+        title: "Условия рассрочки",
+        path: "/page/terms-of-payments",
+        id: '2',
+    },
+    {
+        title: "Сервисы и Услуги",
+        path: "/page/service",
+        id: '3',
+    },
+    {
+        title: "Контакты",
+        path: "/page/contact-us",
+        id: '4',
+    },
+]
 
 const { SubMenu } = Menu;
 
@@ -39,7 +61,7 @@ class PanelMenu extends Component {
                 openKeys={this.state.openKeys}
                 onOpenChange={this.onOpenChange}
                 className="menu--mobile-2">
-                {menu_data.menuPrimary.menu_1.map((item) => {
+                {mainMenu.map((item) => {
                     if (item.subMenu) {
                         return (
                             <SubMenu
@@ -89,18 +111,10 @@ class PanelMenu extends Component {
                         );
                     } else {
                         return (
-                            <Menu.Item key={item.text}>
-                                {item.type === 'dynamic' ? (
-                                    <Link
-                                        href={`${item.url}/[pid]`}
-                                        as={`${item.url}/${item.endPoint}`}>
-                                        l<a>{item.text}</a>
+                            <Menu.Item key={item.id}>
+                                    <Link href={item.path}>
+                                        <a>{item.title}</a>
                                     </Link>
-                                ) : (
-                                    <Link href={item.url} as={item.alias}>
-                                        <a>{item.text}</a>
-                                    </Link>
-                                )}
                             </Menu.Item>
                         );
                     }

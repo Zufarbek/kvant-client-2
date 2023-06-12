@@ -10,11 +10,11 @@ import Newletters from '~/components/partials/commons/Newletters';
 const ContactUsPage = () => {
     const breadCrumb = [
         {
-            text: 'Home',
+            text: 'Главная',
             url: '/',
         },
         {
-            text: 'ContactUs',
+            text: 'Связаться с нами',
         },
     ];
 
@@ -26,7 +26,6 @@ const ContactUsPage = () => {
                 <ContactInfo />
                 <ContactForm />
             </div>
-            <Newletters layout="container" />
         </PageContainer>
     );
 };

@@ -2,7 +2,10 @@ import React from 'react';
 
 const PartialSpecification = () => (
     <div className="table-responsive">
-        <table className="table table-bordered ps-table ps-table--specification">
+        <p>
+            {product.detail}
+        </p>
+        {/* <table className="table table-bordered ps-table ps-table--specification">
             <tbody>
                 <tr>
                     <td>Color</td>
@@ -33,7 +36,7 @@ const PartialSpecification = () => (
                     <td>Yes</td>
                 </tr>
             </tbody>
-        </table>
+        </table> */}
     </div>
 );
 

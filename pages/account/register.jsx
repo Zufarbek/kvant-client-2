@@ -24,7 +24,7 @@ const RegisterPage = () => {
                     <BreadCrumb breacrumb={breadCrumb} />
                     <Register />
                 </div>
-                <Newletters layout="container" />
+                {/* <Newletters layout="container" /> */}
             </PageContainer>
         </>
     );

@@ -17,7 +17,7 @@ const DefaultDescription = ({product}) => {
                     <PartialDescription product={product}/>
                 </TabPane>
                 <TabPane tab="Характеристики" key="2">
-                    <PartialSpecification />
+                    <PartialSpecification product={product}/>
                 </TabPane>
             </Tabs>
         </div>

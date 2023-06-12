@@ -10,17 +10,25 @@ import MenuCategoriesDropdown from '~/components/shared/menus/MenuCategoriesDrop
 
 const mainMenu= [
     {
-        title: "Главная",
-        id: '#'
+        title: "О нас",
+        path: "/page/about-us",
+        id: '1',
     },
     {
-        title: "О нас",
-        id: '#'
+        title: "Условия рассрочки",
+        path: "/page/terms-of-payments",
+        id: '2',
+    },
+    {
+        title: "Сервисы и Услуги",
+        path: "/page/service",
+        id: '3',
     },
     {
         title: "Контакты",
-        id: '#'
-    }
+        path: "/page/contact-us",
+        id: '4',
+    },
 ]
 
 class NavigationDefault extends Component {

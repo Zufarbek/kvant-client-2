@@ -1,13 +1,14 @@
 import React from 'react';
 
 const VendorAbout = () => (
-    <div className="ps-section--vendor ps-vendor-about">
+    <div className="ps-section--vendor ps-vendor-about" id="terms">
         <div className="container">
             <div className="ps-section__header">
-                <p>WHY SELL ON MARTFURY</p>
+                <p>УСЛОВИЯ РАССРОЧКИ</p>
                 <h4>
-                    Join a marketplace where nearly 50 million buyers around <br /> the world shop
-                    for unique items
+                    Рассрочка для всех жителей республики Узбекистан на сайте kvant.uz! 
+                    <br />
+                    Какие документы необходимы для оформления рассрочки?
                 </h4>
             </div>
             <div className="ps-section__content">

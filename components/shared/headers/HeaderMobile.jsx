@@ -14,10 +14,10 @@ class HeaderMobile extends Component {
             <header className="header header--mobile">
                 <div className="header__top">
                     <div className="header__left">
-                        <p>Welcome to Martfury Online Shopping Store !</p>
+                        <p>Добро пожаловать в Интернет-магазин Квант!</p>
                     </div>
                     <div className="header__right">
-                        <ul className="navigation__extra">
+                        {/* <ul className="navigation__extra">
                             <li>
                                 <Link href="/vendor/become-a-vendor">
                                     <a>Sell on Martfury</a>
@@ -34,7 +34,7 @@ class HeaderMobile extends Component {
                             <li>
                                 <LanguageSwicher />
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
                 <div className="navigation--mobile">
@@ -42,8 +42,8 @@ class HeaderMobile extends Component {
                         <Link href="/">
                             <a className="ps-logo">
                                 <img
-                                    src="/static/img/logo_light.png"
-                                    alt="martfury"
+                                    src="/static/img/kvant/Kvant_horz_logo.svg"
+                                    alt="Kvant"
                                 />
                             </a>
                         </Link>
@@ -59,7 +59,7 @@ class HeaderMobile extends Component {
                             <input
                                 className="form-control"
                                 type="text"
-                                placeholder="Search something..."
+                                placeholder="Я покупаю..."
                             />
                             <button>
                                 <i className="icon-magnifier"></i>

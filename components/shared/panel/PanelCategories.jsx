@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Menu } from 'antd';
 import Link from 'next/link';
 import categories from '../../../public/static/data/static-categories.json';
+import CategoryRepository from '~/repositories/CategoryRepository';
 
 const { SubMenu } = Menu;
 
@@ -14,7 +15,17 @@ class PanelCategories extends Component {
 
     state = {
         openKeys: ['sub1'],
+        categories: []
     };
+
+    componentDidMount() {
+        CategoryRepository.getCategories().then(data => {
+            if (data?.length > 0) {
+                this.setState({categories: data});
+            }
+        })
+    }
+
     onOpenChange = openKeys => {
         const latestOpenKey = openKeys.find(
             key => this.state.openKeys.indexOf(key) === -1
@@ -34,11 +45,14 @@ class PanelCategories extends Component {
                 mode="inline"
                 openKeys={this.state.openKeys}
                 onOpenChange={this.onOpenChange}>
-                {categories.map(category => (
+                {this.state.categories.map(category => (
                     <Menu.Item key={category.id}>
-                        <a href={`/shop?category=${category.slug}`}>
-                            {category.name}
-                        </a>
+                        <Link href={'/category/' + category.id}>
+                            <a>
+                                {category.icon && <img className='mr-3' src={category.icon} width={30} alt={category.title}/>}
+                                {category.title}
+                            </a>
+                        </Link>
                     </Menu.Item>
                 ))}
             </Menu>

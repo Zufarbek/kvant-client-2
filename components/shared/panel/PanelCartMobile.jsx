@@ -41,9 +41,6 @@ const PanelCartMobile = ({ ecomerce }) => {
                     <Link href="/product/[pid]" as={`/product/${item.id}`}>
                         <a className="ps-product__title">{item.title}</a>
                     </Link>
-                    <p>
-                        <strong>Sold by:</strong> {item.vendor}
-                    </p>
                     <small>
                         {item.quantity} x ${item.price}
                     </small>
@@ -54,24 +51,24 @@ const PanelCartMobile = ({ ecomerce }) => {
         footerView = (
             <div className="ps-cart__footer">
                 <h3>
-                    Sub Total:<strong>${amount}</strong>
+                Итого:<strong>${amount}</strong>
                 </h3>
                 <figure>
                     <Link href="/account/shopping-cart">
-                        <a className="ps-btn">View Cart</a>
+                        <a className="ps-btn">Посмотреть корзину</a>
                     </Link>
                     <Link href="/account/checkout">
-                        <a className="ps-btn">Checkout</a>
+                        <a className="ps-btn">Оформить заказ</a>
                     </Link>
                 </figure>
             </div>
         );
     } else {
-        cartItemsView = <p>Cart empty!</p>;
+        cartItemsView = <p>Нет товаров в корзине</p>;
         footerView = (
             <div className="ps-cart__footer">
                 <Link href="/shop">
-                    <a className="ps-btn ps-btn--fullwidth">Shop now</a>
+                    <a className="ps-btn ps-btn--fullwidth">Купить сейчас</a>
                 </Link>
             </div>
         );

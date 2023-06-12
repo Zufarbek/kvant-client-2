@@ -33,4 +33,8 @@ yarn install
 ```bash
 yarn dev 
 ```
-# kvant-client-2
+
+## Start in production
+
+- `pm2 start npm --name "KvantClientMaster3027" -- run "start"` for add pm2
+- `pm2 restart KvantClientMaster3027`
