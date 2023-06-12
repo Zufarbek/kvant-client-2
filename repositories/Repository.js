@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const baseDomain = 'http://192.168.0.148:3000'; // API for products
-const baseDomain = 'http://api.fibro.uz:3026'; // API for products
+const baseDomain = 'https://api.fibro.uz:3026'; // API for products
 // export const basePostUrl = 'http://localhost:1337'; // API for post
 // export const baseStoreURL = 'http://localhost:1337'; // API for vendor(store)
 
